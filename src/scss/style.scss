@@ -1,0 +1,34 @@
+$wrap_max-w: 1170px;
+$out-wrap_max-w: 1595px;
+
+$header-height: 0;
+$footer-minHeight: 275px;
+$aside-width: 325px;
+$main-width: 1fr;
+
+$font-family: "Montserrat", sans-serif;
+$font-size: 16px;
+$font-color_main: #909090;
+$background-color_main: #fff;
+
+$fa-font-path: "./fonts";
+$fa-free: "Font Awesome 6 Free";
+$fa-brands: "Font Awesome 6 Brands";
+
+// -----------------------------------------------------
+@import "../../node_modules/normalize.css/normalize.css";
+@import "normalize";
+@import "fonts";
+@import "settings";
+// -----------------------------------------------------
+@import "../../node_modules/swiper/swiper-bundle";
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome";
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/brands.scss";
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/regular.scss";
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/solid.scss";
+// -----------------------------------------------------
+@import "./components/header";
+@import "./components/main";
+@import "./components/footer";
+// ------------------------------------------------------
+// sections
