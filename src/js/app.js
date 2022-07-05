@@ -1,56 +1,98 @@
 import * as prjFunctions from "./modules/function.js";
+import Typed from 'typed.js';
 
 prjFunctions.isWebp();
 
 import Swiper, { Navigation, Pagination } from "swiper";
 
-const swiper1 = new Swiper('.swiper1', {
+const swiper1 = new Swiper('.swiper', {
 	modules: [Navigation, Pagination],
 
 	// loop: true,
 	// autoHeight: true,
 	slidesPerView: 1,
-	spaceBetween: 32,
-	breakpoints: {
-		1361: {
-			slidesPerView: 4,
-		},
-		1111: {
-			slidesPerView: 3,
-		},
-		822: {
-			slidesPerView: 2,
-		},
-		787: {
-			slidesPerView: 3,
-		},
-		538: {
-			slidesPerView: 2,
-		},
-	},
+	spaceBetween: 0,
+
 
 	pagination: {
 		el: '.swiper-pagination',
 	},
 
 	navigation: {
-		nextEl: '.swiper-button-next1',
-		prevEl: '.swiper-button-prev1',
+		nextEl: '.swiper-button-next',
+		prevEl: '.swiper-button-prev',
 	},
 });
 
 
 // -------------------------------------------------------
 
-const burgerMain = document.querySelector('.firm-burger');
-const burgerBtnBody = burgerMain.querySelector('.firm-burger__button');
+// const burgerMain = document.querySelector('.firm-burger');
+// const burgerBtnBody = burgerMain.querySelector('.firm-burger__button');
 
-burgerBtnBody.addEventListener('click', evt => {
+// burgerBtnBody.addEventListener('click', evt => {
 
-	burgerMain.classList.toggle('firm-burger_open');
+// 	burgerMain.classList.toggle('firm-burger_open');
 
-	burgerMain.classList.add('firm-burger_anim');
-	setTimeout(() => burgerMain.classList.remove('firm-burger_anim'), 1000);
+// 	burgerMain.classList.add('firm-burger_anim');
+// 	setTimeout(() => burgerMain.classList.remove('firm-burger_anim'), 1000);
 
-	setTimeout(() => burgerMain.classList.toggle('firm-burger_png'), 750);
-})
+// 	setTimeout(() => burgerMain.classList.toggle('firm-burger_png'), 750);
+// })
+
+const greetingSearchAnim = () => {
+	setTimeout(() =>
+		greeting.classList.add('greeting_anim'),
+		2000
+	)
+}
+const greetingSearchDone = () => {
+	setTimeout(() =>
+		[
+			greeting.classList.add('greeting_done')
+		],
+		6500
+	)
+}
+
+const greeting = document.querySelector('.greeting')
+
+const options = {
+	strings: [
+		'|',
+		'|',
+		'вёрстка, посадка на WordPress ...',
+		'вёрстка, посадка на WordPress /',
+		'вёрстка, посадка на WordPress |',
+		'вёрстка, посадка на WordPress /',
+		'вёрстка, посадка на WordPress НЕДОРОГО'
+	],
+	// smartBackspace: false,
+	typeSpeed: 100,
+	startDelay: 3000,
+	backDelay: 100,
+	backSpeed: 20,
+	onComplete: (self) => {
+		[greetingSearchAnim(), greetingSearchDone()]
+	}
+
+	// onComplete: (self) => { [, ] }
+	// typeSpeed: 0, // Скорость печати
+	//  backSpeed: 0, // Скорость удаления
+	//  startDelay: 0, // Задержка перед стартом анимации
+	//  backDelay: 500, // Пауза перед удалением 
+	//  loop: false, // Повтор (true или false)
+	//  loopCount: false, // Число повторов, false = бесконечно
+	//  showCursor: true, // Отображение курсора
+	//  attr: null, // Атрибут
+	//  callback: function(){ } // Функция вызываемая после окончания работы плагина
+};
+
+const typed = new Typed('.google__input', options);
+
+
+
+
+
+
+

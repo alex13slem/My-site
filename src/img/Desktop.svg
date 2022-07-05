@@ -1,0 +1,41 @@
+<svg id="Desktop" xmlns="http://www.w3.org/2000/svg" width="760.999" height="647.5" viewBox="0 0 760.999 647.5">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #d0d0d0;
+      }
+
+      .cls-1, .cls-4, .cls-5, .cls-6 {
+        stroke: #1f1f1f;
+        stroke-width: 3px;
+      }
+
+      .cls-1, .cls-2, .cls-4, .cls-5, .cls-6 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2, .cls-3 {
+        fill: #1f1f1f;
+      }
+
+      .cls-4 {
+        fill: #9d9d9d;
+      }
+
+      .cls-5 {
+        fill: #898989;
+      }
+
+      .cls-6 {
+        fill: #a3a3a3;
+      }
+    </style>
+  </defs>
+  <path id="Прямоугольник_5" data-name="Прямоугольник 5" class="cls-1" d="M693.545,2323.44h718a19.994,19.994,0,0,1,20,20v468a20,20,0,0,1-20,20H693.545a20,20,0,0,1-20-20v-468A20,20,0,0,1,693.545,2323.44Z" transform="translate(-672.031 -2321.94)"/>
+  <path id="Прямоугольник_4" data-name="Прямоугольник 4" class="cls-2" d="M707.545,2356.44h690v434H707.545v-434Z" transform="translate(-672.031 -2321.94)"/>
+  <circle id="Эллипс_1" data-name="Эллипс 1" class="cls-3" cx="380.499" cy="16.5" r="3"/>
+  <path id="Фигура_30" data-name="Фигура 30" class="cls-4" d="M975.558,2831.95h156l8.42,82.95-172.606,1.08Z" transform="translate(-672.031 -2321.94)"/>
+  <path id="Фигура_31" data-name="Фигура 31" class="cls-5" d="M967.46,2914.33l-2.381,21.99,177.761-.99-2.62-22.01Z" transform="translate(-672.031 -2321.94)"/>
+  <path id="Фигура_32" data-name="Фигура 32" class="cls-6" d="M941.545,2959.44l26-26,175,1,23,23-7,7-41,2h-116l-46.995-1Z" transform="translate(-672.031 -2321.94)"/>
+  <path id="Фигура_33" data-name="Фигура 33" class="cls-2" d="M941.545,2959.44v7l9,2,61,1h100l48-1,9-5-4-5-6,6-19,2H956.545Z" transform="translate(-672.031 -2321.94)"/>
+</svg>

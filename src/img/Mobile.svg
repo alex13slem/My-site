@@ -1,0 +1,31 @@
+<svg id="Mobile" xmlns="http://www.w3.org/2000/svg" width="331.38" height="655.56" viewBox="0 0 331.38 655.56">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #d0d0d0;
+      }
+
+      .cls-1, .cls-4 {
+        stroke: #212121;
+        stroke-width: 3px;
+      }
+
+      .cls-1, .cls-2, .cls-4 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2, .cls-3 {
+        fill: #212121;
+      }
+
+      .cls-4 {
+        fill: none;
+      }
+    </style>
+  </defs>
+  <path id="Прямоугольник_7" data-name="Прямоугольник 7" class="cls-1" d="M2086.63,2323.44H2347a34,34,0,0,1,34,34V2942a34,34,0,0,1-34,34H2086.63a34,34,0,0,1-34-34V2357.44A34,34,0,0,1,2086.63,2323.44Z" transform="translate(-2051.12 -2321.94)"/>
+  <path id="Прямоугольник_6" data-name="Прямоугольник 6" class="cls-2" d="M2072.94,2397.5h286.69v506.97H2072.94V2397.5Z" transform="translate(-2051.12 -2321.94)"/>
+  <circle id="Эллипс_3" data-name="Эллипс 3" class="cls-3" cx="109.38" cy="40.56" r="4.5"/>
+  <rect id="Прямоугольник_8" data-name="Прямоугольник 8" class="cls-3" x="136.88" y="38.06" width="57" height="4" rx="2" ry="2"/>
+  <path id="Эллипс_2" data-name="Эллипс 2" class="cls-4" d="M2216.28,2917.95a21.257,21.257,0,0,1,0,42.5c-11.44,0-20.72-9.52-20.72-21.25A20.99,20.99,0,0,1,2216.28,2917.95Z" transform="translate(-2051.12 -2321.94)"/>
+</svg>

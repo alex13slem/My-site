@@ -1,16 +1,59 @@
 <!DOCTYPE html>
 <html lang="ru">
 
-@@include('html/head.html',{
-"title":" "
-})
+@@include('html/head.html',{"title":" Привет! "})
 
-<body>
-	@@include('html/header.html',{})
-	<main>
-		@@include('html/page1/section1.html'{})
-	</main>
-	@@include('html/footer.html',{})
+<body class="body">
+	<!-- @@include('html/header.html',{}) -->
+	<section class="greeting" id="greeting">
+		<div class="greeting__google google">
+			<img src="@img/google_logo.svg" alt="GOOGLE">
+			<div class="google__input-wrap">
+				<input class="google__input" type="text" placeholder="">
+			</div>
+		</div>
+		<div class="greeting__hello">
+			<p>Привет, друг!</p>
+		</div>
+	</section>
+	<section class="table" id="table">
+		<div class="table__wrap">
+			<div class="table__greeting">
+				<p>ПРОШУ ЛЮБИТЬ И ЖАЛОВАТЬ!</p>
+			</div>
+			<div class="table__preview preview">
+				<div class="preview__desktop">
+					<img src="@img/Desktop.svg">
+					<div class="prev-screen swiper">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide"><a href=""><img src="@img/DESKTOP-Galactigun.jpg" alt=""></a></div>
+							<div class="swiper-slide"><a href=""><img src="@img/DESKTOP-Galactigun.jpg" alt=""></a></div>
+							<div class="swiper-slide"><a href=""><img src="@img/DESKTOP-Galactigun.jpg" alt=""></a></div>
+
+						</div>
+						<div class="swiper-button-prev"></div>
+						<div class="swiper-button-next"></div>
+					</div>
+				</div>
+				<div class="preview__tablet">
+					<img src="@img/Tablet.svg">
+					<div class="prev-screen"><a href='#'></a></div>
+				</div>
+				<div class="preview__phone">
+					<img src="@img/Mobile.svg">
+					<div class="prev-screen"><a href='#'></a></div>
+				</div>
+			</div>
+			<div class="table__contacts">
+				<ul>
+					<li class="github"><a href="https://github.com/alex13slem">GitHub</a></li>
+					<li class="codepen"><a href="https://codepen.io/alex13slem">CodePen</a></li>
+					<li class="telegram"><a href="https://t.me/a_s_scherba">Telegram</a></li>
+				</ul>
+			</div>
+		</div>
+	</section>
+	<!-- @@include('html/footer.html',{}) -->
 	<script src="https://kit.fontawesome.com/bda9f69c70.js" crossorigin="anonymous"></script>
 	<script src="js/app.min.js"></script>
 </body>

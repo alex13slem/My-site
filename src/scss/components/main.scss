@@ -1,0 +1,379 @@
+.body {
+	background: #f9ed69;
+	display: flex;
+	flex-direction: column;
+}
+
+// ------------------Section GREETING
+
+@keyframes color {
+	0% {
+		color: inherit;
+		background: #fff;
+	}
+	25% {
+		color: #f9ed69;
+		background: $font-color_main;
+	}
+	50% {
+		color: #6a2c70;
+		background: #f08a5d;
+	}
+	75% {
+		color: #f9ed69;
+		background: #6a2c70;
+	}
+	100% {
+		color: $font-color_main;
+		background: #f9ed69;
+	}
+}
+
+.greeting {
+	height: 100vh;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	font-size: 70px;
+	font-variation-settings: "wght" 100, "wdth" 90;
+
+	background: #fff;
+	transition: font-size 0.5s cubic-bezier(0.55, 0.06, 0.68, 0.19),
+		font-variation-settings 0.5s cubic-bezier(0.55, 0.06, 0.68, 0.19), height 1s linear;
+
+	&_anim {
+		font-size: 100px;
+		font-variation-settings: "wght" 700, "wdth" 90;
+
+		animation: color 3s forwards;
+		animation-timing-function: cubic-bezier(0.18, 0.89, 0.32, 1.28);
+		animation-delay: 1s;
+		.typed-cursor {
+			opacity: 0;
+		}
+		.greeting__google {
+			display: none;
+		}
+		.greeting__hello {
+			display: block;
+			transition: transform 1.5s linear;
+		}
+	}
+	&_anim ~ .table {
+		display: flex;
+	}
+
+	&_done {
+		.greeting__hello {
+			transform: translateY(-100vh);
+		}
+		height: 0vh;
+	}
+
+	// &_done ~ .footer {
+	// 	visibility: visible;
+	// }
+
+	&__hello {
+		display: none;
+	}
+}
+.google {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 40px;
+
+	transition: transform 0.5s ease;
+	&__input-wrap {
+		position: relative;
+		display: flex;
+		height: 44px;
+
+		@media (min-width: 560px) {
+			width: 449px;
+		}
+		@media (min-width: 672px) {
+			width: 561px;
+		}
+
+		&::before {
+			position: absolute;
+			content: "";
+			top: calc(50% - 12px);
+			left: 16px;
+			width: 24px;
+			height: 24px;
+			background: url("@img/search.svg") 0 0 no-repeat;
+		}
+		&::after {
+			position: absolute;
+			content: "";
+			top: calc(50% - 12px);
+			right: 16px;
+			width: 24px;
+			height: 24px;
+			background: url("@img/googlemic_clr_24px.svg") 0 0 no-repeat;
+		}
+	}
+	&__input {
+		width: 100%;
+		height: 100%;
+		padding: 1px 44px 1px 52px;
+
+		font-size: 16px;
+		font-variation-settings: "wght" 400, "wdth" 90;
+
+		border-radius: 22px;
+		box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
+	}
+}
+// ------------------Section TABLE
+
+.table {
+	display: none;
+	flex: 1;
+	padding-top: 60px;
+	overflow: hidden;
+
+	background: url("@img/background.svg") 50% 100% / contain no-repeat;
+	&__wrap {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(auto, auto);
+	}
+	&__greeting {
+		grid-column: 1 / 3;
+		grid-row: 1 / 2;
+		P {
+			padding-left: 70px;
+			font-size: 250%;
+			cursor: default;
+		}
+	}
+	&__preview {
+		grid-column: 1 / 2;
+		grid-row: 2 / 3;
+		align-self: end;
+	}
+	&__contacts {
+		grid-column: 2 / 3;
+		grid-row: 1 / 2;
+		ul {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-end;
+			gap: 16px;
+		}
+		li {
+			position: relative;
+			list-style: none;
+			&:hover {
+				a {
+					color: #6a2c70;
+					text-decoration-color: #f08a5d;
+				}
+				&::after {
+					color: #6a2c70;
+					text-shadow: 2px 2px 0px #f08a5d;
+				}
+			}
+			a {
+				font-size: 250%;
+				font-weight: 700;
+				transition: color 0.3s ease;
+			}
+			&::after {
+				padding-left: 8px;
+				font-family: $fa-brands;
+				font-weight: 400;
+				font-size: 250%;
+			}
+			&.github::after {
+				content: "\f09b";
+			}
+			&.codepen::after {
+				content: "\f1cb";
+			}
+			&.telegram::after {
+				content: "\f2c6";
+			}
+		}
+	}
+}
+
+.preview {
+	position: relative;
+	width: calc(50vh + 20%);
+	// height: calc(50% - 10vh);
+	perspective: 1110px;
+
+	margin-bottom: 60px;
+
+	@media (max-aspect-ratio: 16 / 11) {
+		margin-bottom: 40px;
+	}
+
+	&__desktop {
+		position: relative;
+
+		transition: 0.5s ease;
+		transform-origin: center;
+		transform: rotateY(35deg) scale(80%);
+
+		@media (hover: none) {
+			transform: none;
+		}
+		&:hover {
+			transform: none;
+
+			.prev-screen {
+				overflow: overlay;
+			}
+		}
+		&:hover ~ .preview__tablet {
+			transform: translate(300%, 50%) scale(300%);
+			opacity: 0;
+			transition: 0.5s ease;
+		}
+		&:hover ~ .preview__phone {
+			transform: translate(300%, 50%) scale(300%);
+			opacity: 0;
+			transition: 0.5s ease;
+		}
+
+		img {
+			display: block;
+			width: 100%;
+			object-fit: contain;
+		}
+		.prev-screen {
+			position: absolute;
+			width: 90.4%;
+			height: 66.8%;
+			top: 5.4%;
+			left: 4.9%;
+
+			overflow: hidden;
+			box-shadow: 0px 0px 6px 0px rgba(30, 52, 69, 0.87) inset;
+
+			@media (hover: none) {
+				overflow: overlay;
+			}
+
+			a {
+				display: block;
+				width: 100%;
+				height: 100%;
+			}
+		}
+	}
+
+	&__tablet {
+		position: absolute;
+		width: 17%;
+		bottom: 9%;
+		right: 16%;
+
+		@media (hover: none) {
+			display: none;
+		}
+
+		transition: 0.5s 0.3s ease;
+
+		img {
+			display: block;
+			width: 100%;
+			object-fit: contain;
+		}
+		.prev-screen {
+			position: absolute;
+			width: 89%;
+			height: 81%;
+			top: 10%;
+			left: 6%;
+
+			background: url("https://images.wallpaperscraft.ru/image/single/doroga_asfalt_pole_zelenyy_derevya_gory_zamok_45628_1920x1080.jpg")
+				0 0 / cover no-repeat;
+
+			box-shadow: 0px 0px 6px 0px rgba(30, 52, 69, 0.87) inset;
+
+			a {
+				display: block;
+				width: 100%;
+				height: 100%;
+			}
+		}
+	}
+
+	&__phone {
+		position: absolute;
+		width: 10%;
+		bottom: 8%;
+		right: 29%;
+
+		@media (hover: none) {
+			display: none;
+		}
+
+		transition: 0.5s 0.3s ease;
+
+		img {
+			display: block;
+			width: 100%;
+			object-fit: contain;
+		}
+
+		.prev-screen {
+			position: absolute;
+			width: 87%;
+			height: 76%;
+			top: 11%;
+			left: 7%;
+
+			background: url("https://images.wallpaperscraft.ru/image/single/doroga_asfalt_pole_zelenyy_derevya_gory_zamok_45628_1920x1080.jpg")
+				0 0 / cover no-repeat;
+
+			box-shadow: 0px 0px 6px 0px rgba(30, 52, 69, 0.87) inset;
+
+			a {
+				display: block;
+				width: 100%;
+				height: 100%;
+			}
+		}
+	}
+}
+
+.swiper {
+	&::-webkit-scrollbar {
+		width: 0 !important;
+	}
+	&-wrapper {
+	}
+	&-slide {
+		background: #f9ed69;
+	}
+	&-button-prev,
+	&-button-next {
+		&::after {
+			font-family: $fa-free !important;
+			font-weight: 700;
+			color: #fff;
+		}
+	}
+	&-button {
+		&-prev {
+			&::after {
+				content: "\f104" !important;
+			}
+		}
+		&-next {
+			&::after {
+				content: "\f105" !important;
+			}
+		}
+	}
+}

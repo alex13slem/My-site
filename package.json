@@ -46,6 +46,7 @@
     "replace": "latest",
     "sass": "latest",
     "swiper": "latest",
+    "typed.js": "^2.0.12",
     "vinyl-ftp": "latest",
     "webp-converter": "2.2.3",
     "webpack": "latest",
