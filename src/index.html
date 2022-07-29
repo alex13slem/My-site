@@ -5,6 +5,7 @@
 
 <body class="body">
 	<!-- @@include('html/header.html',{}) -->
+
 	<section class="greeting" id="greeting">
 		<div class="greeting__google google">
 			<img src="@img/google_logo.svg" alt="GOOGLE">
@@ -16,43 +17,133 @@
 			<p>Привет, друг!</p>
 		</div>
 	</section>
+
 	<section class="table" id="table">
 		<div class="table__wrap">
 			<div class="table__greeting">
 				<p>ПРОШУ ЛЮБИТЬ И ЖАЛОВАТЬ!</p>
+			</div>
+			<div class="table__contacts">
+				<ul>
+					<li class="github"><a href="https://github.com/alex13slem" target="_blank">GitHub</a></li>
+					<li class="codepen"><a href="https://codepen.io/alex13slem" target="_blank">CodePen</a></li>
+					<li class="telegram"><a href="https://t.me/a_s_scherba" target="_blank">Telegram</a></li>
+				</ul>
 			</div>
 			<div class="table__preview preview">
 				<div class="preview__desktop">
 					<img src="@img/Desktop.svg">
 					<div class="prev-screen swiper">
 						<div class="swiper-wrapper">
-							<div class="swiper-slide"><a href=""><img src="@img/DESKTOP-Galactigun.jpg" alt=""></a></div>
-							<div class="swiper-slide"><a href=""><img src="@img/DESKTOP-Galactigun.jpg" alt=""></a></div>
-							<div class="swiper-slide"><a href=""><img src="@img/DESKTOP-Galactigun.jpg" alt=""></a></div>
+
+							<div class="swiper-slide">
+								<a href="" target="_blank">
+									<button class="prev-screen__btn prev-screen__btn_galact"></button>
+									<img src="@img/Galactigun/DESKTOP-Galactigun.jpg" alt="Galactigun">
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href="" target="_blank">
+									<button class="prev-screen__btn prev-screen__btn_zapovednik"></button>
+									<img src="@img/Zapovednik/DESKTOP-zapovednik.jpg" alt="zapovednik">
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href="" target="_blank">
+									<button class="prev-screen__btn prev-screen__btn_gocorona"></button>
+									<img src="@img/GoCorona/DESKTOP-GoCorona.jpg" alt="GoCorona">
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href="" target="_blank">
+									<button class="prev-screen__btn prev-screen__btn_spacex"></button>
+									<img src="@img/SpaceX/DESKTOP-SpaceX.jpg" alt="SpaceX">
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href="" target="_blank">
+									<button class="prev-screen__btn prev-screen__btn_uber"></button>
+									<img src="@img/UberEats/DESKTOP-uber.jpg" alt="uber">
+								</a>
+							</div>
 
 						</div>
-						<div class="swiper-button-prev"></div>
-						<div class="swiper-button-next"></div>
 					</div>
+					<div class="swiper-button-prev"></div>
+					<div class="swiper-button-next"></div>
 				</div>
 				<div class="preview__tablet">
 					<img src="@img/Tablet.svg">
-					<div class="prev-screen"><a href='#'></a></div>
+					<div class="prev-screen prev-screen_tablet swiper">
+						<div class="swiper-wrapper">
+
+							<div class="swiper-slide">
+								<a href='#' target="_blank">
+									<img src="@img/Galactigun/TABLET-Galactigun.jpg" alt="Galactigun">
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href='#' target="_blank">
+									<img src="@img/Zapovednik/TABLET-zapovednik.jpg" alt="zapovednik">
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href='#' target="_blank">
+									<img src="@img/GoCorona/TABLET-GoCorona.jpg" alt="GoCorona">
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href='#' target="_blank">
+									<img src="@img/SpaceX/TABLET-SpaceX.jpg" alt="SpaceX">
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href='#' target="_blank">
+									<img src="@img/UberEats/TABLET-uber.jpg" alt="uber">
+								</a>
+							</div>
+
+						</div>
+					</div>
 				</div>
 				<div class="preview__phone">
 					<img src="@img/Mobile.svg">
-					<div class="prev-screen"><a href='#'></a></div>
+					<div class="prev-screen prev-screen_phone swiper">
+						<div class="swiper-wrapper">
+
+							<div class="swiper-slide">
+								<a href='#' target="_blank">
+									<img src="@img/Galactigun/MOBILE-Galactigun.jpg" alt="Galactigun">
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href='#' target="_blank">
+									<img src="@img/Zapovednik/MOBILE-zapovednik.jpg" alt="zapovednik">
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href='#' target="_blank">
+									<img src="@img/GoCorona/MOBILE-GoCorona.jpg" alt="GoCorona">
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href='#' target="_blank">
+									<img src="@img/SpaceX/MOBILE-SpaceX.jpg" alt="SpaceX">
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href='#' target="_blank">
+									<img src="@img/UberEats/MOBILE-uber.jpg" alt="uber">
+								</a>
+							</div>
+
+						</div>
+					</div>
 				</div>
-			</div>
-			<div class="table__contacts">
-				<ul>
-					<li class="github"><a href="https://github.com/alex13slem">GitHub</a></li>
-					<li class="codepen"><a href="https://codepen.io/alex13slem">CodePen</a></li>
-					<li class="telegram"><a href="https://t.me/a_s_scherba">Telegram</a></li>
-				</ul>
 			</div>
 		</div>
 	</section>
+
 	<!-- @@include('html/footer.html',{}) -->
 	<script src="https://kit.fontawesome.com/bda9f69c70.js" crossorigin="anonymous"></script>
 	<script src="js/app.min.js"></script>

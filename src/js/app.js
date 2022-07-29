@@ -43,15 +43,16 @@ const swiper1 = new Swiper('.swiper', {
 const greetingSearchAnim = () => {
 	setTimeout(() =>
 		greeting.classList.add('greeting_anim'),
-		2000
+		300
 	)
 }
+
 const greetingSearchDone = () => {
 	setTimeout(() =>
 		[
 			greeting.classList.add('greeting_done')
 		],
-		6500
+		4500
 	)
 }
 
@@ -61,16 +62,15 @@ const options = {
 	strings: [
 		'|',
 		'|',
-		'вёрстка, посадка на WordPress ...',
+		'вёрстка, посадка на WordPress',
 		'вёрстка, посадка на WordPress /',
 		'вёрстка, посадка на WordPress |',
-		'вёрстка, посадка на WordPress /',
-		'вёрстка, посадка на WordPress НЕДОРОГО'
+		'вёрстка, посадка на WordPress /'
 	],
 	// smartBackspace: false,
-	typeSpeed: 100,
-	startDelay: 3000,
-	backDelay: 100,
+	typeSpeed: 50,
+	startDelay: 0,
+	backDelay: 50,
 	backSpeed: 20,
 	onComplete: (self) => {
 		[greetingSearchAnim(), greetingSearchDone()]
