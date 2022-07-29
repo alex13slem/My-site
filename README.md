@@ -1,12 +1,5 @@
-# GULP-new-project
-Basic template for GULP
+# My presenation page
 
-<b>При новой сборке:</b> <code> npm i </code>
+<b>I ask you to familiarize yourself with my work - I am glad to cooperate.</b>
 
-<b>Режим разработчика:</b> <code> npm run dev </code> <br>
-<b>Режим вывода проекта:</b> <code> npm run build </code>
-
-<b>Сгенерировать спрайты:</b> <code> npm run svgSprive </code>
-
-<b>Сгенерировать ZIP файл проекта:</b> <code> npm run zip </code> <br>
-<b>Вывести проект через FTP:</b>  <code> npm run ftp </code> - настройки вывода в папке gulp/config
+Used technologies: HTML5, CSS3 (Sass(SCSS)), JS (API: Swiper JS, Typed JS).
