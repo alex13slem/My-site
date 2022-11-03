@@ -1,9 +1,8 @@
 import * as prjFunctions from "./modules/function.js";
 import Typed from 'typed.js';
+import Swiper, { Navigation, Pagination } from "swiper";
 
 prjFunctions.isWebp();
-
-import Swiper, { Navigation, Pagination } from "swiper";
 
 const swiper1 = new Swiper('.swiper', {
 	modules: [Navigation, Pagination],

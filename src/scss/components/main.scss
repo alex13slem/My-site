@@ -322,6 +322,19 @@ $color4: #3f4441;
 					box-shadow: 0 0 4px 3px $color2;
 				}
 			}
+
+			@keyframes react-logo {
+				100% {
+					transform: rotate(360deg);
+				}
+			}
+			img.react-logo {
+				position: absolute;
+				height: 114px;
+				top: 110px;
+				left: 50px;
+				animation: react-logo 10s linear infinite;
+			}
 			&__btn {
 				position: absolute;
 
@@ -341,6 +354,13 @@ $color4: #3f4441;
 					box-shadow: 0 0 4px 3px $color2;
 				}
 
+				&_distek {
+					bottom: 39.5%;
+					left: 11.8%;
+
+					width: 30.6%;
+					height: 12.7%;
+				}
 				&_galact {
 					bottom: 39.5%;
 					left: 11.8%;
